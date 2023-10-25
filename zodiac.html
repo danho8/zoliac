@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zodiac</title>
+</head>
+
+<body>
+    <button onclick="inputZodiac()">input</button>
+
+</body>
+<script>
+    function inputZodiac() {
+        const birthDay = prompt("Nhập ngày sinh của bạn: ");
+        const birthMonth = prompt("Nhập tháng sinh của bạn: ");
+
+        // check validate birthDay, birthMonth
+        // if (birthDay < 1 || birthDay > 31 || birthMonth < 1 || birthMonth > 12) {
+        //     alert("Ngày hoặc tháng sinh không hợp lệ");
+        //     return;
+        // }
+
+        let zodiac = "";
+        switch (birthMonth) {
+            case "1":
+                if (birthDay <= 19) {
+                    zodiac = "Ma Kết";
+                } else {
+                    zodiac = "Bảo Bình";
+                }
+                break;
+            case "2":
+                // if (birthDay <= 18) {
+                //     zodiac = "Bảo Bình";
+                // } else {
+                //     zodiac = "Song Ngư";
+                // }
+                // break;
+                if (birthDay <= 18) {
+                    zodiac = "Bảo Bình";
+                } else if (birthDay <= 29) {
+                    zodiac = "Song Ngư";
+                }
+                else {
+                    alert("Ngày sinh không hợp lệ");
+                    return;
+                }
+                break;
+            case "3":
+                if (birthDay <= 20) {
+                    zodiac = "Song Ngư";
+                } else {
+                    zodiac = "Bạch Dương";
+                }
+                break;
+            case "4":
+                if (birthDay <= 19) {
+                    zodiac = "Bạch Dương";
+                } else {
+                    zodiac = "Kim Ngưu";
+                }
+                break;
+            case "5":
+                if (birthDay <= 20) {
+                    zodiac = "Kim Ngưu";
+                } else {
+                    zodiac = "Song Tử";
+                }
+                break;
+            case "6":
+                if (birthDay <= 21) {
+                    zodiac = "Song Tử";
+                } else {
+                    zodiac = "Cự Giải";
+                }
+                break;
+            case "7":
+                if (birthDay <= 22) {
+                    zodiac = "Cự Giải";
+                } else {
+                    zodiac = "Sư Tử";
+                }
+                break;
+            case "8":
+                if (birthDay <= 22) {
+                    zodiac = "Sư Tử";
+                } else {
+                    zodiac = "Xử Nữ";
+                }
+                break;
+            case "9":
+                if (birthDay <= 22) {
+                    zodiac = "Xử Nữ";
+                } else {
+                    zodiac = "Thiên Bình";
+                }
+                break;
+            case "10":
+                if (birthDay <= 23) {
+                    zodiac = "Thiên Bình";
+                } else {
+                    zodiac = "Bọ Cạp";
+                }
+                break;
+            case "11":
+                if (birthDay <= 21) {
+                    zodiac = "Bọ Cạp";
+                } else {
+                    zodiac = "Nhân Mã";
+                }
+                break;
+            case "12":
+                if (birthDay <= 21) {
+                    zodiac = "Nhân Mã";
+                } else {
+                    zodiac = "Ma Kết";
+                }
+                break;
+            default:
+                alert("Ngày hoặc tháng sinh không hợp lệ");
+        }
+
+        alert(`Bạn thuộc chòm sao ${zodiac}`);
+
+
+    }
+</script>
+
+</html>
