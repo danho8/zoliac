@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime</title>
+</head>
+
+<body>
+
+
+</body>
+<script>
+    const number = +prompt('nhap vao gia tri')
+    let count = 0;
+    let N = 2;
+
+    while (count < number) {
+        let check = true
+        for (let index = 2; index < N; index++) {
+            if (N % index == 0) {
+                check = false
+                break
+            }
+        }
+        if (check) {
+            console.log(N);
+            count++
+        }
+        N++
+    }
+</script>
+
+</html>
